@@ -13,15 +13,16 @@ app.get('/', (req,res)=>{
 //add users route
 app.get('/users', function(req, res) {
 	var title = 'Users Page';
-        res.render('users/view', {
+        res.render('users', {
     	title: title,
     	users: data
 	});
+});
 
 app.get('/users/view/:id', function(req, res) {
   var title = 'User Page';
   var id = req.params.id;
-  res.render('users/view', {
+  res.render('users/view/:id', {
       title: title,
       user: data[--id]
   });

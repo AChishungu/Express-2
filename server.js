@@ -17,14 +17,6 @@ app.get('/users', function(req, res) {
     	title: title,
     	users: data
 	});
-});
-app.get('/users', function(req, res) {
-	var title = 'Users Page';
-        res.render('users/views', {
-    	title: title,
-    	users: data
-	});
-});
 
 app.get('/users/view/:id', function(req, res) {
   var title = 'User Page';
